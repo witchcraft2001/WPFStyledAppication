@@ -2,8 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:StyledApp"
-             StartupUri="MainWindow.xaml">
+             StartupUri="/StyledApp;component/Views/EditUserView.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary >
+            <ResourceDictionary.MergedDictionaries >
+                <ResourceDictionary Source="Theme/TextControls.xaml"/>
+                <ResourceDictionary Source="Theme/Buttons.xaml"/>
+                <ResourceDictionary Source="Theme/Colors.xaml"/>
+                <ResourceDictionary Source="Theme/Window.xaml"/>
+                <ResourceDictionary x:Name="IconsDictionary" Source="Images/Icons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

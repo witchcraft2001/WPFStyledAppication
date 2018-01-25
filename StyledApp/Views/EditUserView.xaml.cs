@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StyledApp.Infrastructure;
+using StyledApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +15,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StyledApp
+namespace StyledApp.Views
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EditUserView : Window, IClosableView
     {
-        public MainWindow()
+        public EditUserView()
         {
             InitializeComponent();
+            this.DataContext = new UserViewModel(this);
         }
     }
 }
